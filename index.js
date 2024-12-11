@@ -29,19 +29,19 @@ let persons = [
     name: "Mary Poppendieck",
     number: "39-23-6423122",
   },
-];
+]
 
 app.get('/api/persons', (request, response) => {
   response.json(persons);
-});
+})
 
 app.get('/info', (request, response) => {
   const now = new Date();
   response.send(`
     <p>Phonebook has info for ${persons.length} persons</p>
     <p>${now.toString()}</p>
-  `);
-});
+  `)
+})
 
 app.get('/api/persons/:id', (request, response) => {
   const id = request.params.id;
@@ -51,14 +51,14 @@ app.get('/api/persons/:id', (request, response) => {
   } else {
     response.status(404).end();
   }
-});
+})
 
 app.delete('/api/persons/:id', (request, response) => {
-  const id = request.params.id;
-  persons = persons.filter((p) => p.id !== id);
+  const id = request.params.id
+  persons = persons.filter((p) => p.id !== id)
 
-  response.status(204).end();
-});
+  response.status(204).end()
+})
 
 app.post('/api/persons', (request, response) => {
   const body = request.body;
