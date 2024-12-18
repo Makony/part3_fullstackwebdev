@@ -8,7 +8,8 @@
     "dev": "nodemon index.js",
     "test": "echo\\\"Error: no test specified\\\"&& exit 1\"",
     "build": "rmdir /s /q dist && cd ../introdemo && npm run build && xcopy dist ../part3_fullstackwebdev /e /i",
-    "deploy": "git add . && git commit -m uibuild && git push"
+    "deploy": "git add . && git commit -m uibuild && git push",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@stylistic/eslint-plugin-js": "^2.12.1",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
     "nodemon": "^3.1.7"
   }
 }
