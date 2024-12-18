@@ -1,11 +1,11 @@
 
-
+GET http://localhost:3001/api/persons/6761e78965718649db44ca55
 ###
 
-POST http://localhost:3001/api/persons/HTTP/1.1
+POST http://localhost:3001/api/persons
 content-type: application/json
 
 {
-    "name": "saome",
-    "number": "92-394"
+    "name": "OOll",
+    "number": 00303
 }
